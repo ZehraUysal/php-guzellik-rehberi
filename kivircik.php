@@ -4,10 +4,10 @@ require_once "connectDb.php" ;
 $sql = "SELECT * FROM sac_onerileri WHERE sac_tipi = 'kıvırcık'";
 $result = $conn->query($sql);
 
-// Saç tiplerine göre önerileri depolamak için boş diziler
+
 $kivircik_sac = [];
 
-// Eğer veri varsa, her bir satırı kontrol et ve ilgili dizilere yerleştir
+
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $kivircik_sac[] = $row;
