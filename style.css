@@ -1,12 +1,11 @@
-/* Genel Ayarlar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0; /* Resim yolu */
-    background-size: cover; /* Tüm ekranı kapla */
-    background-position: center; /* Ortala */
-    background-repeat: no-repeat; /* Tekrarlama */
-    background-attachment: fixed; /* Sayfa kaydırıldığında sabit kalır */
+    padding: 0; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 body.index_bg {
     background-image: url('images/index-bg.jpg');
@@ -18,7 +17,7 @@ body.makyaj_bakim {
     background-image: url('images/makyaj-bakim-arka.jpg');
 }
 
-/* Cilt bakım sayfası için arkaplan resmi */
+
 body.cilt_bakim {
     background-image: url('images/cilt-bakim-arka.jpg');
 }
@@ -32,7 +31,7 @@ body.duz_bg{
     background-image: url('images/duz-arka.jpg');
 }
 body.yagli_bg{
-    background-color: #FFF5E1; /* Sütlü Beyaz */
+    background-color: #FFF5E1; 
     background-image: url('images/yagli-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -72,10 +71,10 @@ body.forum-page {
     color: #333;
     background-image: url('images/forumsayfa-bg.jpg');
 }
-/* Navigasyon Çubuğu */
+
 nav {
     display: flex;
-    justify-content: center; /* Menü elemanlarını ortaya al */
+    justify-content: center; 
     align-items: center;
     background-color: #d6bbd1;
     color: white;
@@ -85,14 +84,14 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Menü elemanlarını merkeze al */
-    flex-grow: 1; /* Ortalamayı sağlamak için esnek alan kullan */
+    justify-content: center; 
+    flex-grow: 1; 
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    position: relative; /* Dropdown menüyü yerleştirebilmek için */
+    position: relative;
     margin-right: 20px;
 }
 
@@ -102,9 +101,9 @@ nav ul li a {
 }
 
 nav ul li .dropdown-menu {
-    display: none; /* Başlangıçta gizle */
+    display: none; 
     position: absolute;
-    top: 100%; /* Alt menüyü ana menünün altında göster */
+    top: 100%; 
     left: 0;
     background-color: #333;
     padding: 10px;
@@ -112,7 +111,7 @@ nav ul li .dropdown-menu {
 }
 
 nav ul li:hover .dropdown-menu {
-    display: block; /* Üzerine gelindiğinde göster */
+    display: block; 
 }
 
 nav ul li .dropdown-menu li {
@@ -130,7 +129,7 @@ nav ul li .dropdown-menu li a:hover {
     background-color: #444;
 }
 .site-header {
-    margin-top: 20px; /* Başlığı biraz aşağıya al */
+    margin-top: 20px; 
     margin-bottom: 100px;
 }
 
@@ -139,16 +138,16 @@ nav ul li .dropdown-menu li a:hover {
     font-weight: bold;
     font-style: oblique;
     color: #000;
-    text-decoration: none; /* Linki tıklanabilir yapıyoruz */
+    text-decoration: none; 
     transition: color 0.3s ease;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .site-title:hover {
     text-decoration: none;
-    color: #4CAF50; /* Hover ile renk değişimi */
+    color: #4CAF50; 
 }
-/* İçerik Kısımları */
+
 .content-sections {
     display: flex;
     justify-content: space-around;
@@ -162,7 +161,7 @@ nav ul li .dropdown-menu li a:hover {
     border: 2px solid #ddd;
     border-radius: 10px;
     padding: 10px; 
-    background-color: rgba(255, 255, 255, 0.7); /* Şeffaf arka plan */
+    background-color: rgba(255, 255, 255, 0.7); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -188,7 +187,7 @@ nav ul li .dropdown-menu li a:hover {
     text-decoration: none;
 }
 
-/* Kullanıcı Kontrolleri */
+
 .user-controls {
     display: flex;
     align-items: center;
@@ -206,9 +205,9 @@ nav ul li .dropdown-menu li a:hover {
 
 }
 
-/* Modal ve Giriş Formları */
+
 .modal {
-    display: none; /* Başlangıçta gizli */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -296,17 +295,14 @@ a {
     text-decoration: none;
 }
 
-/*a:hover {
-    text-decoration: underline;
-}*/
-/* İçerik alanı saç bakım cart curt */
+
 .content {
     display: flex;
-    flex-wrap: wrap; /* Öğelerin bir sonraki satıra geçmesine izin verir */
-    justify-content: center; /* İçerikleri yatayda eşit dağıtır */
-    gap: 30px; /* Öğeler arasında boşluk bırakır */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
     padding: 20px;
-    max-width: 1200px; /* İçeriği sınırlı genişlikte tutar */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
@@ -324,7 +320,7 @@ a {
     max-width: 800px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Metni içeri almak için gerekli */
+    position: relative; 
     text-align: center;
 }
 
@@ -333,29 +329,29 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Görsellerin yuvarlak olması için */
+
 .hair-section-img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    object-fit: cover; /* Görsellerin düzgün şekilde yuvarlak olmasını sağlar */
+    object-fit: cover; 
 }
 
-/* Yazı stilini düzenleme */
+
 .hair-section p {
     margin: 0;
     font-size: 24px;
     font-style: italic;
     color: #555;
-    text-align: left; /* Yazıyı tam ortalayın */
-    font-weight: bold; /* Yazıyı belirginleştirebilir */
+    text-align: left; 
+    font-weight: bold; 
 }
 .hair-section a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; /* Bağlantı altını çizmekten kurtul */
-    color: inherit; /* Bağlantı rengini değiştirme */
+    text-decoration: none; 
+    color: inherit; 
 }
 .hair-section-title {
     font-size: 30px;
@@ -364,7 +360,7 @@ a {
     color: rgba(245, 245, 220, 1);
     letter-spacing: 2px;
     font-family: 'Arial', sans-serif;
-    text-align: center; /* Başlık ortalanır */
+    text-align: center; 
 }
 .hair-section .hair-description {
     font-size: 23px;
