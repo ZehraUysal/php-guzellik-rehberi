@@ -6,10 +6,10 @@ require_once "connectDb.php" ;
 $sql = "SELECT * FROM makyaj_onerileri WHERE makyaj_tipi = 'gece'";
 $result = $conn->query($sql);
 
-// Saç tiplerine göre önerileri depolamak için boş diziler
+
 $gece_makyaj = [];
 
-// Eğer veri varsa, her bir satırı kontrol et ve ilgili dizilere yerleştir
+
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $gece_makyaj[] = $row;
