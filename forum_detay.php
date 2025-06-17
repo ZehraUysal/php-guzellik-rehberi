@@ -3,7 +3,7 @@ session_start();
 require_once "connectDb.php" ;
 $konu_id = isset($_GET['konu_id']) ? intval($_GET['konu_id']) : 0;
 
-// Konu detayını al
+
 $sql = "SELECT konu_baslik, konu_aciklama FROM forum_konulari WHERE konu_id = $konu_id";
 $result = $conn->query($sql);
 
@@ -13,7 +13,7 @@ if ($result->num_rows == 0) {
 
 $konu = $result->fetch_assoc();
 
-// Yorumları al
+
 $yorum_sql = "
     SELECT 
         y.yorum_id,
@@ -33,10 +33,10 @@ $yorum_sql = "
         y.yorum_tarihi DESC";
 $yorum_result = $conn->query($yorum_sql);
 
-// Yorum ekleme işlemi
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['kullanici_id'])) {
     if (isset($_POST['yorum_id'])) {
-        // Yorum güncelleme işlemi
+        
         $yorum_id = intval($_POST['yorum_id']);
         $yorum_metni = $conn->real_escape_string($_POST['yorum_metni']);
         $kullanici_id = intval($_SESSION['kullanici_id']);
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['kullanici_id'])) {
             exit();
         }
     } else {
-        // Yeni yorum ekleme işlemi
+        
         $yorum_metni = $conn->real_escape_string($_POST['yorum_metni']);
         $kullanici_id = intval($_SESSION['kullanici_id']);
 
@@ -61,19 +61,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['kullanici_id'])) {
     }
 }
 
-// Yorum silme işlemi
+
 if (isset($_GET['sil_yorum_id']) && isset($_SESSION['kullanici_id'])) {
     $sil_yorum_id = intval($_GET['sil_yorum_id']);
     $kullanici_id = intval($_SESSION['kullanici_id']);
 
-    // Silme işlemi, yalnızca yorum sahibi tarafından yapılabilir
+   
     $sil_sql = "SELECT kullanici_id FROM forum_yorumlari WHERE yorum_id = $sil_yorum_id";
     $sil_result = $conn->query($sil_sql);
 
     if ($sil_result->num_rows > 0) {
         $yorum = $sil_result->fetch_assoc();
         if ($yorum['kullanici_id'] == $kullanici_id) {
-            // Yorum sahibi ile giriş yapan kullanıcı eşleşiyorsa sil
+           
             $delete_sql = "DELETE FROM forum_yorumlari WHERE yorum_id = $sil_yorum_id";
             $conn->query($delete_sql);
             header("Location: forum_detay.php?konu_id=$konu_id");
@@ -82,7 +82,7 @@ if (isset($_GET['sil_yorum_id']) && isset($_SESSION['kullanici_id'])) {
     }
 }
 
-// Yorum güncelleme işlemi (Form gösterme)
+
 $yorum_id_guncelle = isset($_GET['guncelle_yorum_id']) ? intval($_GET['guncelle_yorum_id']) : 0;
 $yorum_metni_guncelle = '';
 if ($yorum_id_guncelle) {
