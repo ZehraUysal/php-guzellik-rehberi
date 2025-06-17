@@ -3,7 +3,7 @@ session_start();
 
 require_once "connectDb.php" ;
 
-// Parametreleri ve tablo adlarını eşleştirme
+
 $table_map = [
     'sac_id' => ['table' => 'sac_onerileri', 'favori_table' => 'sac_favoriler'],
     'makyaj_id' => ['table' => 'makyaj_onerileri', 'favori_table' => 'makyaj_favoriler'],
@@ -19,17 +19,17 @@ foreach ($table_map as $key => $info) {
         $current_table = $info['table'];
         $favori_table = $info['favori_table'];
         $current_id = (int)$_GET[$key];
-        $current_key = $key; // Dinamik sütun ismi
+        $current_key = $key; 
         break;
     }
 }
 
-// Geçersiz parametre kontrolü
+
 if (!$current_table || !$current_id) {
     die("Geçersiz istek, gerekli parametre eksik!");
 }
 
-// Veritabanı sorgusu
+
 $sql = "SELECT * FROM $current_table WHERE $current_key = ?";
 $stmt = $conn->prepare($sql);
 
@@ -47,7 +47,7 @@ if ($result->num_rows > 0) {
     die("Bu ID ile ilgili öneri bulunamadı!");
 }
 
-// Favori kontrolü
+
 $is_favori = false;
 if (isset($_SESSION['kullanici_adi'])) {
     $kullanici_id = $_SESSION['kullanici_id'];
@@ -65,7 +65,7 @@ if (isset($_SESSION['kullanici_adi'])) {
 
 $icerik = $oneriler['icerik'];
 
-// Vurgulamak istenilen kelimeler
+
 $anahtar_kelime = ['doğal', 'bakım', 'etkili', 'güzel','ince','bukle','dalga'];
 
 foreach ($anahtar_kelime as $kelime) {
