@@ -391,8 +391,7 @@ a {
 .oneriler-link:hover {
     background-color: #d0d0d0;
 }
-/* Genel Konteyner */
-/* İçerik Detay  kivircik vb */
+
 
 .content-detay {
     padding: 40px;
@@ -470,24 +469,24 @@ a {
 .favori-btn:hover {
     background-color: #45a049;
 }
-/* İçerik Metni (card-body içindeki metin) */
+
 .card-body p {
-    font-family: 'Georgia', serif; /* Yazı tipi */
-    font-size: 18px; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
-    line-height: 1.8; /* Satır yüksekliği */
-    text-align: justify; /* Metni iki yana yasla */
-    margin: 10px 0; /* Üst ve alt boşluk */
+    font-family: 'Georgia', serif; 
+    font-size: 18px; 
+    color: #333;
+    line-height: 1.8; 
+    text-align: justify;
+    margin: 10px 0; 
 }
 
-/* Öne çıkan anahtar kelimeler için */
+
 .card-body p strong {
-    color: #4CAF50; /* Yazı rengi (yeşil) */
-    font-weight: bold; /* Yazı kalınlığı */
-    text-decoration: underline; /* Alt çizgi ekle */
-    background-color: #f0f9f0; /* Arka plan rengi */
-    padding: 2px 4px; /* Kelimenin etrafındaki boşluk */
-    border-radius: 4px; /* Kenarları yuvarlat */
+    color: #4CAF50; 
+    font-weight: bold;
+    text-decoration: underline; 
+    background-color: #f0f9f0;
+    padding: 2px 4px; 
+    border-radius: 4px; 
 }
 
 .message-container {
@@ -525,12 +524,12 @@ a {
     border-color: #5a2d6e;
 }
 
-/* Liste öğeleri için hover efekti */
+
 .sac-onerileri-list li:hover .oneriler-link {
     background-color: #f2e4f9;
     color: #5a2d6e;
 }
-/* Genel liste stili */
+
 
 ul {
     list-style-type: none;
@@ -551,8 +550,7 @@ ul li a {
 ul li a:hover {
     color: #0984e3;
 }
-/* Genel Ayarlar */
-/* Forum Konteyneri */
+
 .forum-container {
     max-width: 800px;
     margin: 20px auto;
@@ -568,7 +566,7 @@ ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Forum Konuları */
+
 .forum-topics {
     display: flex;
     flex-direction: column;
@@ -618,10 +616,7 @@ ul li a:hover {
     background-color: #45a049;
 }
 
-/* Yeni Konu Ekle Sayfası Stilleri */
 
-/* Sayfa genel ayarları */
-/* Form Genel Stili */
 .konu-ekle-form {
     max-width: 700px;
     margin: 20px auto;
@@ -633,7 +628,7 @@ ul li a:hover {
     transition: transform 0.3s ease;
 }
 
-/* Form Giriş Alanları */
+
 .konu-ekle-form .form-group {
     margin-bottom: 20px;
 }
@@ -657,20 +652,20 @@ ul li a:hover {
     transition: border-color 0.3s ease;
 }
 
-/* Textarea İçin */
+
 .konu-ekle-form textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-/* Input ve Textarea Fokus Durumu */
+
 .konu-ekle-form input[type="text"]:focus,
 .konu-ekle-form textarea:focus {
     border-color: #007BFF;
     outline: none;
 }
 
-/* Buton Stili */
+
 .konu-ekle-form .submit-btn {
     width: 100%;
     padding: 15px;
@@ -686,30 +681,30 @@ ul li a:hover {
     transition: all 0.3s ease;
 }
 
-/* Buton Hover ve Focus Durumları */
+
 .konu-ekle-form .submit-btn:hover {
     background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 91, 255, 0.3); /* Hoverda hafif gölge efekti */
-    transform: translateY(-2px); /* Hoverda butonun hafifçe yükselmesi */
+    box-shadow: 0 4px 10px rgba(0, 91, 255, 0.3); 
+    transform: translateY(-2px); 
 }
 
 .konu-ekle-form .submit-btn:focus {
     outline: none;
-    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.6); /* Focus olduğunda mavi ışık efekti */
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.6); 
 }
 
-/* Form Hover Animasyonu */
+
 .konu-ekle-form:hover {
-    transform: translateY(-5px); /* Formu hafifçe kaldırarak hareket efekti */
+    transform: translateY(-5px); 
 }
 
-/* Forum Boş Mesaj */
+
 .no-topics {
     text-align: center;
     font-size: 16px;
     color: #777;
 }
-/* Forum Detay Sayfası */
+
 .forum-detail-container {
     max-width: 800px;
     margin: 20px auto;
@@ -733,7 +728,7 @@ ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Yorumlar Bölümü */
+
 .yorumlar {
     margin-top: 20px;
     border-top: 1px solid #ddd;
@@ -807,14 +802,13 @@ ul li a:hover {
     background-color: #45a049;
 }
 
-/* Giriş Yap Uyarısı */
+
 .forum-detail-container p {
     text-align: center;
     color: #777;
     font-size: 14px;
 }
-/* favoriler kısmı*/
-/* Genel Sayfa Ayarları */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -839,7 +833,7 @@ h2 {
     color: #d6bbd1;
 }
 
-/* Favoriler Bölümü */
+
 .favoriler-container {
     max-width: 800px;
     margin: 20px auto;
@@ -849,7 +843,7 @@ h2 {
     border-radius: 10px;
 }
 
-/* Liste Elemanları */
+
 .favori-item {
     display: flex;
     justify-content: space-between;
@@ -868,13 +862,13 @@ h2 {
     font-size: 1.1em;
 }
 
-/* Favori Kartına Hover Efekti */
+
 .favori-item:hover {
     background-color: #f0f8ff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Mesaj Kutusu */
+
 .message {
     text-align: center;
     font-size: 1.1em;
@@ -882,7 +876,7 @@ h2 {
     margin: 20px 0;
 }
 
-/* Alt Metin */
+
 .footer {
     text-align: center;
     margin: 20px 0;
@@ -893,19 +887,19 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 15px; /* Yorumlar arasında boşluk */
+    margin-bottom: 15px; 
 }
 
 .yorum .sol-taraf {
-    flex: 2; /* Yorum metnini ve tarihi solda tutar */
+    flex: 2; 
 }
 
 .yorum .sag-taraf {
     display: flex;
-    flex-direction: column; /* Butonları alt alta hizalayacak şekilde ayarladık */
+    flex-direction: column; 
     justify-content: flex-start;
-    align-items: flex-start; /* Butonları sola hizala */
-    gap: 10px; /* Butonlar arasında boşluk bırak */
+    align-items: flex-start; 
+    gap: 10px; 
     flex: 1;
 }
 
@@ -921,8 +915,8 @@ h2 {
 }
 
 .tarih {
-    display: block; /* Tarihi blok elemanı yaparak butonlardan bağımsız kıldık */
-    margin-bottom: 10px; /* Tarih ile butonlar arasına boşluk */
+    display: block; 
+    margin-bottom: 10px; 
 }
 
 
