@@ -135,7 +135,6 @@ CREATE TABLE `kullanicilar` (
 --
 
 INSERT INTO `kullanicilar` (`kullanici_id`, `kullanici_adi`, `email`, `sifre`, `kayit_tarihi`) VALUES
-(5, 'zehra', 'zehrauysal3558@gmail.com', '$2y$10$qK8tT/VmLVy1mwrcPowMo.PiHFDQS47cCT2YSehYeE8KldLfoZrr6', '2024-12-01 21:41:07'),
 (6, 'ceyda', 'ceyda@gmail.com', '$2y$10$8Py.jHDN/nqsWgj1Z5Ii4.qpF.1RpntWc9IL930vdtpQjQfJRDfJu', '2024-12-01 21:42:13'),
 (8, 'semra', 'semra@gmail.com', '$2y$10$VUdsMPC9E1wUOcHQeV4pzOQiZ0RgMuC69dD50da4svBch2xu9yhLK', '2024-12-11 16:45:51'),
 (9, 'nisa', 'nisa@gmail.com', '$2y$10$QYEXs3h1x.IU2/DUO1WtaekKdDW/Qp4YqrbtnhHyakwk5E64d983a', '2024-12-26 23:27:10'),
