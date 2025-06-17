@@ -6,10 +6,10 @@ require_once "connectDb.php" ;
 $sql = "SELECT * FROM cilt_onerileri WHERE cilt_tipi = 'karma'";
 $result = $conn->query($sql);
 
-// Saç tiplerine göre önerileri depolamak için boş diziler
+
 $karma_cilt = [];
 
-// Eğer veri varsa, her bir satırı kontrol et ve ilgili dizilere yerleştir
+
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $karma_cilt[] = $row;
