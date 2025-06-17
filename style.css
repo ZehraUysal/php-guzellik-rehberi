@@ -1,0 +1,942 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; /* Resim yolu */
+    background-size: cover; /* Tüm ekranı kapla */
+    background-position: center; /* Ortala */
+    background-repeat: no-repeat; /* Tekrarlama */
+    background-attachment: fixed; /* Sayfa kaydırıldığında sabit kalır */
+}
+body.index_bg {
+    background-image: url('images/index-bg.jpg');
+}
+body.sac_bakim {
+    background-image: url('images/sac-bakim-arka.jpg');
+}
+body.makyaj_bakim {
+    background-image: url('images/makyaj-bakim-arka.jpg');
+}
+
+/* Cilt bakım sayfası için arkaplan resmi */
+body.cilt_bakim {
+    background-image: url('images/cilt-bakim-arka.jpg');
+}
+body.kivircik_bg{
+    background-image: url('images/kivircik-arka.jpg');
+}
+body.dalgali_bg{
+    background-image: url('images/dalgali-arka.jpg');
+}
+body.duz_bg{
+    background-image: url('images/duz-arka.jpg');
+}
+body.yagli_bg{
+    background-color: #FFF5E1; /* Sütlü Beyaz */
+    background-image: url('images/yagli-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body.karma_bg{
+    background-image: url('images/karma-bg.jpg');
+}
+body.kuru_bg{
+    background-image: url('images/kuru-bg.jpg');
+}
+body.gece_bg{
+    background-image: url('images/gece-bg.jpg');
+}
+body.gunluk_bg{
+    background-image: url('images/gunluk-bg.jpg');
+}
+body.dogal_bg{
+    background-image: url('images/dogal-bg.jpg');
+}
+body.favori_bg{
+    background-image: url('images/favori-bg.jpg');
+}
+body.detay {
+    background-image: url('images/detay-bg.jpg');
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+body.forum-page {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    background-image: url('images/forumsayfa-bg.jpg');
+}
+/* Navigasyon Çubuğu */
+nav {
+    display: flex;
+    justify-content: center; /* Menü elemanlarını ortaya al */
+    align-items: center;
+    background-color: #d6bbd1;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Menü elemanlarını merkeze al */
+    flex-grow: 1; /* Ortalamayı sağlamak için esnek alan kullan */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* Dropdown menüyü yerleştirebilmek için */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li .dropdown-menu {
+    display: none; /* Başlangıçta gizle */
+    position: absolute;
+    top: 100%; /* Alt menüyü ana menünün altında göster */
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block; /* Üzerine gelindiğinde göster */
+}
+
+nav ul li .dropdown-menu li {
+    margin: 0;
+}
+
+nav ul li .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 20px;
+}
+
+nav ul li .dropdown-menu li a:hover {
+    background-color: #444;
+}
+.site-header {
+    margin-top: 20px; /* Başlığı biraz aşağıya al */
+    margin-bottom: 100px;
+}
+
+.site-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-style: oblique;
+    color: #000;
+    text-decoration: none; /* Linki tıklanabilir yapıyoruz */
+    transition: color 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.site-title:hover {
+    text-decoration: none;
+    color: #4CAF50; /* Hover ile renk değişimi */
+}
+/* İçerik Kısımları */
+.content-sections {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.section-div {
+    text-align: center;
+    width: 30%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.7); /* Şeffaf arka plan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+/* Kullanıcı Kontrolleri */
+.user-controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.user-controls .button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/* Modal ve Giriş Formları */
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 55px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+#authForms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button.button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.button:hover {
+    background-color: #45a049;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/*a:hover {
+    text-decoration: underline;
+}*/
+/* İçerik alanı saç bakım cart curt */
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Öğelerin bir sonraki satıra geçmesine izin verir */
+    justify-content: center; /* İçerikleri yatayda eşit dağıtır */
+    gap: 30px; /* Öğeler arasında boşluk bırakır */
+    padding: 20px;
+    max-width: 1200px; /* İçeriği sınırlı genişlikte tutar */
+    margin: 0 auto;
+}
+
+.hair-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 800px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Metni içeri almak için gerekli */
+    text-align: center;
+}
+
+.hair-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Görsellerin yuvarlak olması için */
+.hair-section-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Görsellerin düzgün şekilde yuvarlak olmasını sağlar */
+}
+
+/* Yazı stilini düzenleme */
+.hair-section p {
+    margin: 0;
+    font-size: 24px;
+    font-style: italic;
+    color: #555;
+    text-align: left; /* Yazıyı tam ortalayın */
+    font-weight: bold; /* Yazıyı belirginleştirebilir */
+}
+.hair-section a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Bağlantı altını çizmekten kurtul */
+    color: inherit; /* Bağlantı rengini değiştirme */
+}
+.hair-section-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(245, 245, 220, 1);
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Başlık ortalanır */
+}
+.hair-section .hair-description {
+    font-size: 23px;
+    color: rgba(241, 225, 198, 1);
+    line-height: 1.6;
+    margin: 0;
+}
+.sac-onerileri-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sac-onerileri-list li {
+    margin: 10px 0;
+}
+
+.oneriler-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.oneriler-link:hover {
+    background-color: #d0d0d0;
+}
+/* Genel Konteyner */
+/* İçerik Detay  kivircik vb */
+
+.content-detay {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.content-detay h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+.content-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: pink;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.card-body {
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.card-footer {
+    padding: 10px 15px;
+    text-align: right;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.favori-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.favori-btn.active {
+    background-color: #f44336;
+}
+
+.favori-btn:hover {
+    background-color: #45a049;
+}
+/* İçerik Metni (card-body içindeki metin) */
+.card-body p {
+    font-family: 'Georgia', serif; /* Yazı tipi */
+    font-size: 18px; /* Yazı boyutu */
+    color: #333; /* Yazı rengi */
+    line-height: 1.8; /* Satır yüksekliği */
+    text-align: justify; /* Metni iki yana yasla */
+    margin: 10px 0; /* Üst ve alt boşluk */
+}
+
+/* Öne çıkan anahtar kelimeler için */
+.card-body p strong {
+    color: #4CAF50; /* Yazı rengi (yeşil) */
+    font-weight: bold; /* Yazı kalınlığı */
+    text-decoration: underline; /* Alt çizgi ekle */
+    background-color: #f0f9f0; /* Arka plan rengi */
+    padding: 2px 4px; /* Kelimenin etrafındaki boşluk */
+    border-radius: 4px; /* Kenarları yuvarlat */
+}
+
+.message-container {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 20px;
+}
+.sac-onerileri-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sac-onerileri-list li {
+    margin-bottom: 20px;
+}
+
+.oneriler-link {
+    font-size: 18px;
+    color: #5a2d6e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid #5a2d6e;
+    width: 100%;
+    text-align: center;
+}
+
+.oneriler-link:hover {
+    color: #fff;
+    background-color: #5a2d6e;
+    border-color: #5a2d6e;
+}
+
+/* Liste öğeleri için hover efekti */
+.sac-onerileri-list li:hover .oneriler-link {
+    background-color: #f2e4f9;
+    color: #5a2d6e;
+}
+/* Genel liste stili */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0984e3;
+}
+/* Genel Ayarlar */
+/* Forum Konteyneri */
+.forum-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.forum-container h2 {
+    text-align: center;
+    color: #4B0082;
+    margin-bottom: 30px;
+}
+
+/* Forum Konuları */
+.forum-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.forum-topic {
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.forum-topic h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.forum-topic h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.forum-topic h3 a:hover {
+    color: #4CAF50;
+}
+
+.forum-topic:hover {
+    background: #e8f5e9;
+    transform: translateY(-5px);
+}
+
+.konu-ekle-btn {
+    display: inline-block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.konu-ekle-btn:hover {
+    background-color: #45a049;
+}
+
+/* Yeni Konu Ekle Sayfası Stilleri */
+
+/* Sayfa genel ayarları */
+/* Form Genel Stili */
+.konu-ekle-form {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+/* Form Giriş Alanları */
+.konu-ekle-form .form-group {
+    margin-bottom: 20px;
+}
+
+.konu-ekle-form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.konu-ekle-form input[type="text"],
+.konu-ekle-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Textarea İçin */
+.konu-ekle-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Input ve Textarea Fokus Durumu */
+.konu-ekle-form input[type="text"]:focus,
+.konu-ekle-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Buton Stili */
+.konu-ekle-form .submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Buton Hover ve Focus Durumları */
+.konu-ekle-form .submit-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 91, 255, 0.3); /* Hoverda hafif gölge efekti */
+    transform: translateY(-2px); /* Hoverda butonun hafifçe yükselmesi */
+}
+
+.konu-ekle-form .submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.6); /* Focus olduğunda mavi ışık efekti */
+}
+
+/* Form Hover Animasyonu */
+.konu-ekle-form:hover {
+    transform: translateY(-5px); /* Formu hafifçe kaldırarak hareket efekti */
+}
+
+/* Forum Boş Mesaj */
+.no-topics {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+}
+/* Forum Detay Sayfası */
+.forum-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #333;
+}
+
+.forum-detail-container h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.forum-detail-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Yorumlar Bölümü */
+.yorumlar {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.yorum {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.yorum p {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.yorum .tarih {
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.yorum strong {
+    color: #4CAF50;
+}
+
+/* Yorum Formu */
+.yorum-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.yorum-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.yorum-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.yorum-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.yorum-form button:hover {
+    background-color: #45a049;
+}
+
+/* Giriş Yap Uyarısı */
+.forum-detail-container p {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+/* favoriler kısmı*/
+/* Genel Sayfa Ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Başlıklar */
+h1 {
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+    color: #d6bbd1;
+}
+
+/* Favoriler Bölümü */
+.favoriler-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Liste Elemanları */
+.favori-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favori-item a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Favori Kartına Hover Efekti */
+.favori-item:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mesaj Kutusu */
+.message {
+    text-align: center;
+    font-size: 1.1em;
+    color: #777;
+    margin: 20px 0;
+}
+
+/* Alt Metin */
+.footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
+.yorum {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px; /* Yorumlar arasında boşluk */
+}
+
+.yorum .sol-taraf {
+    flex: 2; /* Yorum metnini ve tarihi solda tutar */
+}
+
+.yorum .sag-taraf {
+    display: flex;
+    flex-direction: column; /* Butonları alt alta hizalayacak şekilde ayarladık */
+    justify-content: flex-start;
+    align-items: flex-start; /* Butonları sola hizala */
+    gap: 10px; /* Butonlar arasında boşluk bırak */
+    flex: 1;
+}
+
+.sil-yorum, .guncelle-yorum {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sil-yorum:hover, .guncelle-yorum:hover {
+    text-decoration: underline;
+}
+
+.tarih {
+    display: block; /* Tarihi blok elemanı yaparak butonlardan bağımsız kıldık */
+    margin-bottom: 10px; /* Tarih ile butonlar arasına boşluk */
+}
+
+
+
+
+
+
+
+
+
+
+
+
