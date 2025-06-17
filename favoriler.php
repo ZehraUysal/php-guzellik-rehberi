@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Kullanıcı giriş kontrolü
+
 if (!isset($_SESSION['kullanici_adi'])) {
     header("Location: index.php");
     exit();
@@ -11,7 +11,7 @@ $kullanici_id = $_SESSION['kullanici_id'];
 
 require_once "connectDb.php" ;
 
-// Favori kontrolü
+
 $favoriler_var_mi = false;
 
 ?>
@@ -22,7 +22,7 @@ $favoriler_var_mi = false;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorilerim</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
- <!-- Harici CSS dosyası -->
+ 
 </head>
 <body class="favori_bg">
 	<?php include('menu.php'); ?>
@@ -35,7 +35,7 @@ $favoriler_var_mi = false;
     <main>
         <div class="favoriler-container">
             <?php
-            // Saç Favorileri
+            
             $sql_sac = "SELECT sac_onerileri.baslik, sac_onerileri.sac_id 
                         FROM sac_favoriler 
                         JOIN sac_onerileri ON sac_favoriler.sac_id = sac_onerileri.sac_id 
@@ -55,7 +55,7 @@ $favoriler_var_mi = false;
                 }
             }
 
-            // Makyaj Favorileri
+            
             $sql_makyaj = "SELECT makyaj_onerileri.baslik, makyaj_onerileri.makyaj_id 
                            FROM makyaj_favoriler 
                            JOIN makyaj_onerileri ON makyaj_favoriler.makyaj_id = makyaj_onerileri.makyaj_id 
@@ -75,7 +75,7 @@ $favoriler_var_mi = false;
                 }
             }
 
-            // Cilt Favorileri
+           
             $sql_cilt = "SELECT cilt_onerileri.baslik, cilt_onerileri.cilt_id 
                          FROM cilt_favoriler 
                          JOIN cilt_onerileri ON cilt_favoriler.cilt_id = cilt_onerileri.cilt_id 
@@ -95,7 +95,7 @@ $favoriler_var_mi = false;
                 }
             }
 
-            // Eğer hiçbir favori yoksa genel mesaj
+            
             if (!$favoriler_var_mi) {
                 echo "<p class='message'>Favorileriniz bulunmamaktadır.</p>";
             }
