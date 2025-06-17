@@ -4,7 +4,7 @@ require_once "connectDb.php" ;
 
 header('Content-Type: application/json');
 
-// Konu başlığını ve açıklamasını POST ile alıyoruz
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $konu_baslik = $_POST['konu_baslik'];
     $konu_aciklama = $_POST['konu_aciklama'];
